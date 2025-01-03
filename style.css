@@ -22,6 +22,102 @@ html {
     overflow: hidden;
 }
 
+/*Navigation */
+.navbar {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10;
+    width: 100%;
+    height:12rem;
+    padding: 0 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.navbar.sticky{
+    height: 8rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 10rem rgba(130, 162, 235, 0.6);
+}
+
+/*Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-family: "Mooli", cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline; /* Ensures the text stays on the same line */
+
+}
+
+.logo span{
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffd863;
+    display: inline; /* Keeps the span inline with the text */
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3)
+
+}
+
+.sticky .logo {
+    color: #453333;
+    text-shadow: none;
+}
+
+.sticky .logo span {
+    color: #453333;
+    text-shadow: none;
+}
+
+/*End of Logo*/
+
+/*Nav items*/
+.nav-items{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sticky .nav-link {
+    color: #453333;
+    text-shadow: none;
+}
+
+.sticky .nav-item {
+    color: #453333;
+    text-shadow: none;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+
+.nav-link{
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover {
+    transform: translateY(-0.2rem);
+}
+
+
+/*End of Navigation */
+
+
 /* header */
 header {
     width: 100%;
@@ -39,7 +135,15 @@ header {
 
 .banner h1 {
     font-family: "Mooli", cursive;
-    font-size: 7rem;
+    font-size: 90px;
+    color: #f7a6b0;
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3)
+
+}
+
+.banner h1 span{
+    font-family: "Mooli", cursive;
+    font-size: 90px;
     color: #fff;
     text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3)
 
@@ -48,12 +152,12 @@ header {
 .banner h3 {
     font-size: 3rem;
     font-weight: 300;
-    text-transform: lowercase;
-    color: #fff;
+    color: #453333;
     text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-    margin: 0 0 3rem 1rem;
+    margin: 2rem 0 3rem 0;
 
 }
+
 
 /* end of banner */
 
@@ -102,8 +206,88 @@ header {
 }
 
 
+/*overview */
+
+.overview {
+    width:100%;
+    height: 150vh;
+}
+
+.overview-wrapper {
+    width: 60%;
+    background-color: #f7a6b0;
+    box-shadow:0 2rem 6rem rgba(130, 162, 235, 0.3);
+    position: absolute;
+    top: 100%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 0;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overview-wrapper h1 {
+    font-family: "Mooli", cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #453333;
+    letter-spacing: 0.1rem;
+    margin-bottom: 4rem;
+}
+
+.intro {
+    font-family: "Mooli", cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    margin: 0 0 3rem 1rem;
+    text-align: center;
+    
+}
+
+.overview-wrapper h1 {
+    font-family: "Mooli", cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #453333;
+    letter-spacing: 0.1rem;
+    margin-bottom: 4rem;
+    position: relative; /* Required for pseudo-elements */
+}
+
+.overview-wrapper h1::before,
+.overview-wrapper h1::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Align vertically with the text */
+    transform: translateY(-50%); /* Center alignment */
+    width: 3rem; /* Adjust based on your design */
+    height: 3rem; /* Adjust based on your design */
+    background-image: url('./images/flower-icon.png'); /* Path to your image */
+    background-size: contain; /* Ensure the image scales correctly */
+    background-repeat: no-repeat; /* Prevent tiling */
+}
+
+.overview-wrapper h1::before {
+    left: -3rem; /* Position on the left side */
+}
+
+.overview-wrapper h1::after {
+    right: -3rem; /* Position on the right side */
+}
+
 /* end of container */
 
+body {
+    height: 1000px; /* Set the body to be taller than the viewport */
+    background-color: lightblue;
+  } 
+  
 
 
 

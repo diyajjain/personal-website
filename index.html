@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Diya Jain</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -12,16 +12,45 @@
 
 </head>
 <body>
-    <script src="script.js"></script>
 
     <div class= "container">
 
+        <!--Navigation-->
+
+        <nav class = "navbar">
+            <!--logo-->
+            <a href="index.html">
+                <div class="logo">
+                    <span class="dj-highlight">DJ</span> | Diya Jain
+                </div>
+            </a>
+            <!--End of logo-->
+
+            <ul class = "nav-items">
+                <li class = "nav-item">
+                    <a href = "index.html" class = "nav-link">Home</a>
+                </li>
+                <li class = "nav-item">
+                    <a href = "about.html" class = "nav-link">About</a>
+                </li>
+                <li class = "nav-item">
+                    <a href = "work.html" class = "nav-link">Work</a>
+                </li>
+                <li class = "nav-item">
+                    <a href = "contact.html" class = "nav-link">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!--End of Navigation-->
+
         <header>
             <!--Banner-->
-            <div class = "banner">
-                <h1>Hello, <br />
-                    I'm Diya Jain!</h1>
-                <h3>Welcome to my personal website</h3>
+            <div class="banner">
+                <h1>Hi, <br /> 
+                    I'm <span class="highlight">Diya!</span>
+                </h1>
             </div>
 
             <!--Backgrounds-->
@@ -32,8 +61,24 @@
             </div>
             
         </header>
+
+        <section class="overview">
+            <div class="overview-wrapper">
+                <h1>Overview</h1>
+                <div class = "intro">
+                    <p>I'm a sophomore at Duke University studying Computer Science with a certificate in Innovation
+                        and Entrepreneurship and a minor in Visual Arts. Click on the About tab to learn more!
+                    </p>
+                </div>
+            </div>
+            <div class="overview-bg-1"></div>
+            <div class="overview-bg-2"></div>
+        </section>
         
     </div>
+
+    <script src="script.js"></script>
+
 
     
 </body>
