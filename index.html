@@ -31,13 +31,13 @@
                     <a href = "index.html" class = "nav-link">Home</a>
                 </li>
                 <li class = "nav-item">
-                    <a href = "about.html" class = "nav-link">About</a>
+                    <a href="#about-section" class = "nav-link">About</a>
                 </li>
                 <li class = "nav-item">
-                    <a href = "work.html" class = "nav-link">Work</a>
+                    <a href = "#experience-projects" class = "nav-link">Work</a>
                 </li>
                 <li class = "nav-item">
-                    <a href = "contact.html" class = "nav-link">Contact</a>
+                    <a href = "#contact-form" class = "nav-link">Contact</a>
                 </li>
             </ul>
 
@@ -59,23 +59,139 @@
                 <div class = "bg-1"></div>
                 <div class = "bg-2"></div>
             </div>
+
+            <div class="scroll-indicator">
+                <div class="arrow"></div>
+            </div>
             
         </header>
+
+    
+
+        <section id="about-section" class="about">
+            <h1>Introduction</h1>
+        </section>
 
         <section class="overview">
             <div class="overview-wrapper">
                 <h1>Overview</h1>
                 <div class = "intro">
                     <p>I'm a sophomore at Duke University studying Computer Science with a certificate in Innovation
-                        and Entrepreneurship and a minor in Visual Arts. Click on the About tab to learn more!
+                        and Entrepreneurship and a minor in Visual Arts. I am passionate about creating innovative solutions
+                        that bridge technology, art and social impact. 
                     </p>
                 </div>
             </div>
             <div class="overview-bg-1"></div>
             <div class="overview-bg-2"></div>
         </section>
+
+
+        <section class="about-more">
+            <div class="about-more-wrapper">
+              <h2>Fun Facts</h2>
+              <p>
+                🎨 I create paintings to raise funds for the <a href="https://auromir.org" target="_blank">Auromir Foundation</a> in India, a cause close to my heart. Check out my paintings in projects section!
+              </p>
+              <p>
+                💻 My computer science journey began when I came to Duke, where I’ve enjoyed exploring the intersection of creativity and technology.
+              </p>
+              <p>
+                🕺 I dance on Duke’s premier bhangra team, <strong>Duke Dhamaka,</strong> to connect with Indian culture.
+              </p>
+              <p>
+                👩‍🏫 As a teaching assistant for Computer Architecture, I enjoy helping others deepen their understanding of computer science concepts.
+              </p>
+              <p>
+                🎶 I love listening to all kinds of music genres.
+              </p>
+              <p>
+                🚀 I’m currently exploring opportunities to grow my skills in software development and product management.
+              </p>
+            </div>
+          </section>
+
+        <section id="experience-projects" class="experience">
+            <h1>Experience/Projects</h1>
+        </section>
+
+
+
+        <section class="experiments-projects">
+            <div class="projects-wrapper">
+          
+              <!-- Biomedical Engineering Research -->
+              <div class="project">
+                <h3>Research Intern @ DU-Biofluidic Laboratory, FAU</h3>
+                <p>
+                  In 2022, I performed biomedical engineering research aimed at developing a microfluidic device to measure the deformability of red blood cells infected with malaria. This experience sparked my interest in technology. Here is the link to my <a href="https://research-in-the-pine.webflow.io/diya-jain-1" target="_blank">full-length published research paper</a>.
+                </p>
+              </div>
+          
+              <!-- Now Analytics Internship -->
+              <div class="project">
+                <h3>Data Science Intern at Now Analytics</h3>
+                <p>
+                  During June-August of 2024, I interned as a data scientist at Now Analytics, where I worked with business intelligence tools like Microsoft Power BI and Power Automate for Process Mining. I used Python and SQL to clean data, identify bottlenecks in business processes, and provide insights that helped increase client productivity. 
+                </p>
+              </div>
+          
+              <!-- Chatbot Project -->
+              <div class="project">
+                <h3>EndoAssist</h3>
+                <p>
+                  I developed a chatbot for my dad's endocrinology website using Flask and React. The chatbot handles frequently asked questions and integrates OpenAI’s API for dynamic responses. You can view the code on <a href="https://github.com/diyajjain/chatbot_project" target="_blank">GitHub</a>.
+                </p>
+              </div>
+          
+              <!-- Current Project -->
+              <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>
+                  This is my personal website that I have created using HTML, CSS, and JavaScript to provide an overview of my background and skills. <a href="https://github.com/diyajjain/personal-website" target="_blank">GitHub</a>.
+                </p>
+              </div>
+          
+              <!-- Art Projects -->
+              <div class="project">
+                <h3>Art Work</h3>
+                <p>
+                  Along with my tech interests, I’m passionate about art. I create paintings to raise funds for the Auromir Foundation in India, where the proceeds go towards supporting children and women from low-income families. You can view some of my art projects on my art account <a href="https://www.instagram.com/creationsbydj/?hl=en" target="_blank">here</a>.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact-form"  class="contact">
+            <div class="contact-wrapper">
+                <div class="contact-header"">
+                    <h1>Contact</h1>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-content-wrapper">
+                        <h4>Get in touch!</h4>
+                    <form action="/send-email" method="POST">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email Address">
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message"></textarea>
+                        <button type="button">Submit Message</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          <footer>
+            <a href="https://www.linkedin.com/in/diya-jain-824a05298/" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+            <p>Feel free to email me at diya.jain@duke.edu</p>
+          </footer>
         
     </div>
+
+    
 
     <script src="script.js"></script>
 

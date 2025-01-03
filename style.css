@@ -11,6 +11,8 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+
 }
 /*end of default styles*/
 
@@ -61,7 +63,7 @@ html {
     font-size: 3.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #ffd863;
+    color: #fff;
     display: inline; /* Keeps the span inline with the text */
     text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3)
 
@@ -205,6 +207,47 @@ header {
     box-shadow: 7rem 4rem 6rem rgb(85, 52, 119, 0.9);
 }
 
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px; /* Position it at the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .arrow {
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid #333333;
+    border-bottom: 2px solid #333;
+    transform: rotate(45deg);
+    animation: moveDown 1s infinite ease-in-out;
+  }
+  
+  /* Bouncing animation for the arrow */
+  @keyframes moveDown {
+    0% { transform: translateY(0) rotate(45deg); }
+    50% { transform: translateY(10px) rotate(45deg); }
+    100% { transform: translateY(0) rotate(45deg); }
+  }
+  
+
+
+.about {
+    position: absolute;
+    top: 100%;
+    left: 8%;
+    padding-top: 6rem; /* Add some padding to the top */
+
+  }
+
+.about h1 {
+    font-family: "Mukta", cursive;
+    font-size: 7rem;
+    font-weight: bold;
+    color: #453333;
+    margin-bottom: 4rem;
+}
 
 /*overview */
 
@@ -218,7 +261,7 @@ header {
     background-color: #f7a6b0;
     box-shadow:0 2rem 6rem rgba(130, 162, 235, 0.3);
     position: absolute;
-    top: 100%;
+    top: 145%;
     left:50%;
     transform: translate(-50%, -50%);
     padding: 2rem 0;
@@ -226,6 +269,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 .overview-wrapper h1 {
@@ -250,44 +294,284 @@ header {
 }
 
 .overview-wrapper h1 {
-    font-family: "Mooli", cursive;
-    font-size: 2rem;
-    text-transform: uppercase;
+    font-family: "Mukta", cursive;
+    font-size: 3rem;
     font-weight: bold;
     color: #453333;
-    letter-spacing: 0.1rem;
-    margin-bottom: 4rem;
-    position: relative; /* Required for pseudo-elements */
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.overview-wrapper h1::before,
-.overview-wrapper h1::after {
-    content: "";
+
+
+.about-more {
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-more-wrapper {
+    width: 70%;
+    background-color: #ffe0e5; /* Light complementary background */
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1); /* Subtle depth */
+    padding: 2.5rem;
+    border-radius: 1rem;
+    color: #453333;
+    font-family: "Mooli", cursive;
     position: absolute;
-    top: 50%; /* Align vertically with the text */
-    transform: translateY(-50%); /* Center alignment */
-    width: 3rem; /* Adjust based on your design */
-    height: 3rem; /* Adjust based on your design */
-    background-image: url('./images/flower-icon.png'); /* Path to your image */
-    background-size: contain; /* Ensure the image scales correctly */
-    background-repeat: no-repeat; /* Prevent tiling */
+    top: 170%
+  }
+  
+  .about-more-wrapper h2 {
+    font-family: "Mukta", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #453333;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .about-more-wrapper p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .about-more-wrapper a {
+    color: #453333;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .about-more-wrapper a:hover {
+    color: #f76c82; /* Hover effect for links */
+  }
+
+  .experience {
+    position: absolute;
+    top: 230%;
+    left: 8%;
+    padding-top: 8rem; /* Add some padding to the top */
+
+  }
+
+.experience h1 {
+    font-family: "Mukta", cursive;
+    font-size: 7rem;
+    font-weight: bold;
+    color: #453333;
+    margin-bottom: 4rem;
 }
 
-.overview-wrapper h1::before {
-    left: -3rem; /* Position on the left side */
-}
 
-.overview-wrapper h1::after {
-    right: -3rem; /* Position on the right side */
-}
+.experiments-projects {
+    position: absolute;
+    top: 255%;
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .projects-wrapper {
+    
+    width: 80%;
+    background-color: #dbc0fa;
+    box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    border-radius: 1rem;
+    color: #453333;
+    font-family: "Mooli", cursive;
+    
+  }
+  
+  .projects-wrapper h2 {
+    font-family: "Mukta", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #453333;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .projects-wrapper .project {
+    margin-bottom: 2rem;
+  }
+  
+  .projects-wrapper h3 {
+    font-size: 2rem;
+    color: #453333;
+    margin-bottom: 1rem;
+  }
+  
+  .projects-wrapper p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+  
+  .projects-wrapper a {
+    color: #453333;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .projects-wrapper a:hover {
+    color: #f76c82; /* Link hover effect */
+  }
+
+  .contact {
+    width: 100%;
+    height: 150vh;
+    margin-top: 80rem;
+    padding: 5rem;
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .contact-header {
+    text-align:center;
+  }
+
+  .contact-header h1 {
+    font-family: "Mukta", cursive;
+    font-size: 7rem;
+    font-weight: bold;
+    color: #453333;
+  }
+
+  .contact-content {
+    display: flex;
+  }
+
+  .contact-content-wrapper {
+    width: 45rem;
+    height: 78rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 10rem rgba(130, 162, 235, 0.4);
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    margin: 0 3rem;
+    text-align: center;
+  }
+
+  .contact-content-wrapper h4 {
+    font-family: "Mooli", cursive;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #f76c82;
+    letter-spacing: 0.1rem;
+    margin: 3rem 0 1rem 0;
+  }
+
+  .contact-content-wrapper form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-content-wrapper input,
+  .contact-content-wrapper textarea {
+    width: 100%;
+    margin: 2rem 0;
+    background-color: #f0f2f4;
+    padding: 1rem 1rem 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+  }
+
+  .contact-content-wrapper input {
+    height: 5rem;
+  }
+
+  .contact-content-wrapper textarea {
+    height: 10rem;
+    resize: none;
+  }
+
+
+  .contact-content-wrapper input::placeholder,
+  .contact-content-wrapper textarea::placeholder {
+    color: #3a3242;
+  }
+
+  .contact-content-wrapper button {
+    height: 5rem;
+    background: linear-gradient(to right, #fce1e4, #f7a6b0);
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #3a3242;
+    cursor: pointer;
+  }
+
+  footer {
+    text-align: center; /* Center-align the footer content */
+    padding: 2rem 0;
+    position: absolute; /* Absolute positioning */
+    top: 500%; /* Adjust based on your layout */
+    left: 50%; /* Start centering horizontally */
+    transform: translateX(-50%); /* Fully center the footer horizontally */
+    width: 100%; /* Ensure it spans the full width of the page */
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
+  
+  footer a{
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .linkedin-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    transition: transform 0.2s; /* Add a hover effect */
+  }
+  
+  .linkedin-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  }
+
+  footer p {
+    margin: 0;
+    font-family: "Mooli", cursive;
+    font-size: 2rem;
+    color: #453333;
+  }
+  
+
+
+
+
+  
+
+/* .overview-bg-1 {
+    width: 40rem;
+    height: 40rem;
+    background: linear-gradient(to right, transparent, transparent, #ffd863);
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 50%
+
+} */
 
 /* end of container */
 
-body {
-    height: 1000px; /* Set the body to be taller than the viewport */
-    background-color: lightblue;
-  } 
-  
 
 
 
