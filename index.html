@@ -26,6 +26,14 @@
             </a>
             <!--End of logo-->
 
+            <!--menu icon-->
+            <div class="menu-icon">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+            </div>
+
+            <!--end of menu icon-->
+
             <ul class = "nav-items">
                 <li class = "nav-item">
                     <a href = "index.html" class = "nav-link">Home</a>
@@ -170,12 +178,12 @@
                 <div class="contact-content">
                     <div class="contact-content-wrapper">
                         <h4>Get in touch!</h4>
-                    <form action="/send-email" method="POST">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Email Address">
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Your Message"></textarea>
-                        <button type="button">Submit Message</button>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="1c8b2faf-336d-432b-a46a-daf9ae0046db">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name= "email" placeholder="Your Email Address" required>
+                        <textarea name = "message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Submit Message</button>
                     </form>
                     </div>
                 </div>
